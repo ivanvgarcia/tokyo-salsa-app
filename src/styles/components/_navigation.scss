@@ -1,0 +1,65 @@
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    border-bottom: .3rem solid $off-black;
+
+    &__logo {
+        align-self: center;
+    }
+
+    &__logo h1 {
+        margin: 0;
+        color: $red;
+    }
+
+    &__links {}
+
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__item {
+        padding: 2rem 0;
+    }
+
+    &__item a {
+        position: relative;
+        text-decoration: none;
+        padding: 1.9rem 1rem;
+        color: $red;
+        transition: all .2s ease-in-out;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    &__item a::after {
+        content: "";
+        transform: scaleX(0);
+        height: .4rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $red;
+        transition: all .3s ease-in-out;
+    }
+
+    &__item a:hover {
+        background: $grey-dark;
+        color: #fff;
+    }
+
+    &__item a:hover::after {
+        transform: scaleX(1);
+        width: 100%;
+    }
+}
+
+a.is-active {
+    background: $grey-dark;
+    color: #fff;
+}

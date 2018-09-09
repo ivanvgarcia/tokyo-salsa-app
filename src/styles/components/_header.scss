@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+        padding: 3rem;
+        color: #fff;
+        align-self: center;
+        text-shadow: 0 .1rem .1rem $off-black;
+        height: 10vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__copy:hover {}
+
+    &__copy--yellow {
+        background-image: linear-gradient(to bottom, rgba($red, .7), rgba($pink, .7)), url('../../public/images/salsa.jpg');
+    }
+
+    &__copy--greenish {
+        background-image: linear-gradient(to right, rgba($pink, .7), rgba($pink, .7)), url('../../public/images/salsa.jpg');
+    }
+
+    &__copy--purple {
+        background-image: linear-gradient(to right, rgba($pink, .7), rgba($pink, .7)), url('../../public/images/salsa-2.jpg');
+    }
+}
