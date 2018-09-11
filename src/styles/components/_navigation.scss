@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     background: #fff;
-    border-bottom: .3rem solid $off-black;
 
     &__logo {
         align-self: center;
@@ -10,7 +9,7 @@
 
     &__logo h1 {
         margin: 0;
-        color: $red;
+        color: $secondary-color;
     }
 
     &__links {}
@@ -24,17 +23,17 @@
     }
 
     &__item {
-        padding: 1.85rem 0;
+        padding: 2rem 0;
     }
 
     &__item a {
         position: relative;
         text-decoration: none;
         padding: 1.9rem 1rem;
-        color: $red;
+        color: $secondary-color;
         transition: all .2s ease-in-out;
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     &__item a::after {
@@ -44,7 +43,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: $red;
+        background: $secondary-color;
         transition: all .3s ease-in-out;
     }
 

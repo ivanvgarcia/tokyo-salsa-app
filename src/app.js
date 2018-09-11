@@ -10,21 +10,27 @@ import { setTextFilter, setInstructorTextFilter, setEventTextFilter } from './ac
 import getVisibleVenues from './selectors/venues';
 import getVisibleInstructors from './selectors/instructors';
 import 'normalize.css/normalize.css';
-import './styles/styles.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStroopwafel, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faStroopwafel, faCoffee);
 
 const store = configureStore();
 
 store.dispatch(addVenue({
     name: 'Studio Pepe 2', 
     image: 'http://studio-pepe.com/wp/wp-content/uploads/2016/03/studio-pepe2.jpg', 
-    description: 'A studio to dance on 2 in Roppongi', address: '123 Roppongi Station, Roppongi, Tokyo'
+    description: 'A studio to dance on 2 in Roppongi', 
+    address: '123 Roppongi Station, Roppongi, Tokyo'
 }
 ));
 
 store.dispatch(addVenue({
     name: 'Caribe', 
-    image: 'img2.jpg', 
-    description: 'A dance club in Roppongi', address: '321 Roppongi Station, Roppongi, Tokyo'
+    image: 'http://studio-pepe.com/wp/wp-content/uploads/2016/03/studio-pepe2.jpg', 
+    description: 'A dance club in Roppongi', 
+    address: '321 Roppongi Station, Roppongi, Tokyo'
 }
 ));
 
