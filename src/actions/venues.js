@@ -5,7 +5,10 @@ export const addVenue = (
         name = '', 
         image = '', 
         description = '',
-        address= ''
+        address= '',
+        city= '',
+        state= '',
+        zipcode= ''
     } = {}
 ) => ({
     type: 'ADD_VENUE',
@@ -14,7 +17,10 @@ export const addVenue = (
         name,
         image,
         description,
-        address
+        address,
+        city,
+        state,
+        zipcode
     }
 });
 

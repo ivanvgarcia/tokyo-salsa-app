@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter} from '../../actions/filters';
+import {setTextFilter, sortByName, sortByAddress} from '../../actions/filters';
 
 const VenueCardsFilters = (props) => (
   <div>
@@ -10,6 +10,18 @@ const VenueCardsFilters = (props) => (
       onChange={(e) => {
       props.dispatch(setTextFilter(e.target.value));
     }}/>
+    <select
+      value={props.filters.sortBy}
+      onChange={(e) => {
+      if (e.target.value === 'name') {
+        props.dispatch(sortByName());
+      } else if (e.target.value === 'address') {
+        props.dispatch(sortByAddress());
+      }
+    }}>
+      <option value="name">Name</option>
+      <option value="address">Address</option>
+    </select>
   </div>
 );
 

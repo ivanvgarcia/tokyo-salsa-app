@@ -1,11 +1,10 @@
 .venue-card {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 45%;
   margin: 1rem;
-  border: solid $dark 0.2rem;
   overflow: hidden;
-  box-shadow: 0 0.2rem 0.4rem $grey-dark;
+  // box-shadow: 0 0.2rem 0.4rem $grey-dark;
 
   & a {
     text-decoration: none;
@@ -22,8 +21,8 @@
     color: white;
     background-image: linear-gradient(
       to right,
-      rgba(255, 180, 143, 0.7),
-      rgba($red, 0.7)
+      rgba($secondary-color-light, 0.7),
+      rgba($secondary-color, 0.7)
     );
     text-align: center;
 
@@ -44,11 +43,30 @@
   }
   &__info {
     padding: 1.2rem;
-    color: $red;
-    
+    color: $grey-dark;
   }
 
   &__description {
-    text-underline: none;
+    display: flex;
+    align-items: center;
+    
   }
+  &__icon {
+    width: 1rem;
+    color: $secondary-color;
+    margin-right: .5rem;
+  }
+}
+
+//move to venuepage.scss
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.venues {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

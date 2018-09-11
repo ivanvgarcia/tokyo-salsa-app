@@ -14,9 +14,11 @@ const VenuesPage = (props) => (
             </button>
         </Link>
         <VenueCardsFilters />
-        {props.venues.map((venue) => {
-            return <VenueCards key={venue.id}{...venue}/>
-        })}
+        <div className="container venues">
+            {props.venues.map((venue) => {
+                return <VenueCards key={venue.id}{...venue}/>
+            })}
+        </div>
     </div>
 );
 
